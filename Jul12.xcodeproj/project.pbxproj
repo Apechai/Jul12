@@ -13,6 +13,7 @@
 		AB1B39D315AD3B7A00589D34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB1B39D115AD3B7A00589D34 /* InfoPlist.strings */; };
 		AB1B39D515AD3B7A00589D34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1B39D415AD3B7A00589D34 /* main.m */; };
 		AB1B39D915AD3B7B00589D34 /* Jul12AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1B39D815AD3B7B00589D34 /* Jul12AppDelegate.m */; };
+		AB1B39E915AD5BA300589D34 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1B39E815AD5BA300589D34 /* View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		AB1B39D615AD3B7B00589D34 /* Jul12-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jul12-Prefix.pch"; sourceTree = "<group>"; };
 		AB1B39D715AD3B7B00589D34 /* Jul12AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jul12AppDelegate.h; sourceTree = "<group>"; };
 		AB1B39D815AD3B7B00589D34 /* Jul12AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jul12AppDelegate.m; sourceTree = "<group>"; };
+		AB1B39E715AD5BA300589D34 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		AB1B39E815AD5BA300589D34 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				AB1B39D715AD3B7B00589D34 /* Jul12AppDelegate.h */,
+				AB1B39E715AD5BA300589D34 /* View.h */,
+				AB1B39E815AD5BA300589D34 /* View.m */,
 				AB1B39D815AD3B7B00589D34 /* Jul12AppDelegate.m */,
 				AB1B39CF15AD3B7A00589D34 /* Supporting Files */,
 			);
@@ -154,6 +159,7 @@
 			files = (
 				AB1B39D515AD3B7A00589D34 /* main.m in Sources */,
 				AB1B39D915AD3B7B00589D34 /* Jul12AppDelegate.m in Sources */,
+				AB1B39E915AD5BA300589D34 /* View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
