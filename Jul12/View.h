@@ -13,7 +13,13 @@
 	UIDatePicker *datePicker;
 	UITextView *textView;
     UISwitch *mySwitch;
+    UITextField *eventText;
 
 }
+
+@property (nonatomic, retain) UIDatePicker *datePicker;
+@property (nonatomic, retain) UITextField *eventText;
+
+- (IBAction) scheduleAlarm:(id) sender;
 
 @end
