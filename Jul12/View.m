@@ -12,7 +12,10 @@
 
 - (void) valueChanged
 {
-	textView.text = [dateFormatter stringFromDate: datePicker.date];
+
+    [dateFormatter setDateFormat:@"HH:mm"]; //24hr time format
+
+    textView.text = [NSString stringWithFormat: @"Switch on to remind you to keep up that good habit everyday at %@.",[dateFormatter stringFromDate: datePicker.date]];
 }
 
 - (id) initWithFrame: (CGRect) frame
@@ -27,7 +30,7 @@
         
 		//Let the date picker assume its natural size.
 		datePicker = [[UIDatePicker alloc] initWithFrame: CGRectZero];
-		datePicker.datePickerMode = UIDatePickerModeDate; //vs. UIDatePickerModeTime
+		datePicker.datePickerMode = UIDatePickerModeTime; //vs. UIDatePickerModeTime
         
 		//Center the picker in the DatePickerView.
 		CGRect b = self.bounds;
@@ -60,8 +63,48 @@
 		textView.font = [UIFont systemFontOfSize: 22];
 		[self valueChanged];
 		[self addSubview: textView];
+        
+        //Do not specify a size for the switch.
+		//Let the switch assume its own natural size.
+		mySwitch = [[UISwitch alloc] initWithFrame: CGRectZero];
+		if (mySwitch == nil) {
+			return nil;
+		}
+        
+		//Call the valueChanged: method of the application delegate
+		//when the value of the switch is changed.
+		
+		[mySwitch addTarget: self
+                     action: @selector(valueChanged:)
+           forControlEvents: UIControlEventValueChanged
+         ];
+		
+		//Center the switch in the SwitchView.
+        
+		mySwitch.center = CGPointMake(
+                                      160,
+                                      400
+                                      );
+        
+		mySwitch.on = NO;	//the default
+		[self addSubview: mySwitch];
 	}
+
 	return self;
+}
+
+- (void) valueChanged: (id) sender {
+	UISwitch *s = sender;
+	if (s.isOn) {
+		//The UISwitch has just been turned on.
+		textView.backgroundColor = [UIColor greenColor];
+        textView.text = [NSString stringWithFormat: @"I'll remind you to do your habit everyday at %@.",[dateFormatter stringFromDate: datePicker.date]];
+	} else {
+		//The UISwitch has just been turned off.
+		
+        textView.backgroundColor = [UIColor whiteColor];
+        textView.text = [NSString stringWithFormat: @"Don't remind you about good habits."];
+    }
 }
 
 

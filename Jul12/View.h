@@ -12,6 +12,7 @@
     NSDateFormatter *dateFormatter;
 	UIDatePicker *datePicker;
 	UITextView *textView;
+    UISwitch *mySwitch;
 
 }
 
