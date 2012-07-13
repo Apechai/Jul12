@@ -16,7 +16,7 @@
 
     [dateFormatter setDateFormat:@"HH:mm"]; //24hr time format
 
-    textView.text = [NSString stringWithFormat: @"Switch on to remind you to keep up that good habit everyday at %@.",[dateFormatter stringFromDate: datePicker.date]];
+    textView.text = [NSString stringWithFormat: @"Switch on to remind you to keep up that good habit everyday at %@. (from Matt's new Mac)",[dateFormatter stringFromDate: datePicker.date]];
 }
 
 - (id) initWithFrame: (CGRect) frame
@@ -64,6 +64,16 @@
 		textView.font = [UIFont systemFontOfSize: 22];
 		[self valueChanged];
 		[self addSubview: textView];
+        
+        
+        CGRect g = CGRectMake(
+                              160, 350, 140, 20);
+        eventText = [[UITextField alloc] initWithFrame: g];
+        eventText.font = [UIFont systemFontOfSize: 14];
+        [self addSubview: eventText];
+        
+        
+        
         
         //Do not specify a size for the switch.
 		//Let the switch assume its own natural size.
